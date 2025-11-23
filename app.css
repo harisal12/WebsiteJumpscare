@@ -1,0 +1,29 @@
+    /* Hilangkan scroll & set background hitam */
+    body {
+      margin: 0;
+      background: #000;
+      overflow: hidden;
+    }
+
+    /* Flash putih untuk efek 'kaget' */
+    #flash {
+      position: fixed;
+      inset: 0;
+      background: white;
+      opacity: 0;
+      transition: 0.15s;
+      pointer-events: none;
+    }
+    #flash.show {
+      opacity: 1;
+    }
+
+    /* Animasi getar layar */
+    @keyframes shakeScreen {
+      0% { transform: translate(0,0); }
+      20% { transform: translate(-20px, 10px); }
+      40% { transform: translate(15px, -15px); }
+      60% { transform: translate(-10px, 20px); }
+      80% { transform: translate(15px, -10px); }
+      100% { transform: translate(0,0); }
+    }
